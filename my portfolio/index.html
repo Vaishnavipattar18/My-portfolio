@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/WhatsApp Image 2023-02-11 at 10.49.46 PM.jpeg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header_text">
+                <h1>Hi,I'm <span>Vaishnavi</span><br>From Belagavi</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/WhatsApp_Image_2023-02-11_at_8.14.42_PM-removebg-preview.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>This is the website which contains about my details</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Personal Details')">Personal Details</p>
+                        <p class="tab-links" onclick="opentab('Others')">Others</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Personal Details">
+                        <ul>
+                            <li><span>First Name</span><br>Vaishnavi</li>
+                            <li><span>Last Name</span><br>Pattar</li> 
+                            <li><span>DOB</span><br>20/11/2002</li>
+                        </ul>      
+                                
+                            
+                    </div>
+                    <div class="tab-contents" id="Others">
+                        <ul>
+                            <li><span>Parent Details</span><br><pre>Vinayak   Vanishri</pre></li>
+                            <li><span>Address</span><br>Bhagwan Chal Bailhongal</li> 
+                            <li><span>District</span><br>Belagavi</li>
+                         </ul>      
+                                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Education</h1>
+            <div class="work-list">
+                <div class="work">
+                <img src="images/schlogo.jpg">
+                <div class="layer">
+                    <h3>My School</h3>
+                    <p>KRCES EMS Bailhongal</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/prism.png">
+                 <div class="layer">
+                    <h3>PU College</h3>
+                    <p>Prism PU Science College Dharwad</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/git.jpg">
+                <div class="layer">
+                    <h3>BE Degree</h3>
+                    <p>KLS Gogte Institute of Technology</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+ </div>
+    
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Details</h1>
+                    <p><i class="fa-solid fa-envelope"></i>git21cs188-t@students.git.edu</p>
+                    <p><i class="fa-sharp fa-solid fa-phone"></i>1236478509</p>
+                    <div class ="social-icons">
+                        <a href="https://instagram.com/vaishnavipattar19?igshid=YmMyMTA2M2Y="><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/Vaishnavipattar18"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @vaishnavi<i class="fa-solid fa-star-of-life"></i></p>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+</body>
+</html>
