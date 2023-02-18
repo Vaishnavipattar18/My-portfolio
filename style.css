@@ -19,6 +19,17 @@ body{
     background-position: center;
 
 }
+.About1{
+    flex-basis: 50%;
+    display:flex;
+    padding: 75px 95px 50px 0px;
+    font-size: 20px;
+}
+.span{
+    display: flex;
+    justify-content: space-between ;
+    flex-wrap:wrap;
+}
 .container{
     padding: 10px 10%;
 }
@@ -56,12 +67,12 @@ nav ul li a:hover::after{
     width: 50%;
 }
 .header_text{
-    margin-top: 20%;
+    margin-top: 10%;
     font-size: 30px;
 }
 .header_text h1{
     font-size: 60px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .header_text h1 span{
     color: #ff004f;
