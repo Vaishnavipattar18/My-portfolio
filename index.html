@@ -13,7 +13,7 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="WhatsApp Image 2023-02-11 at 10.49.46 PM.jpeg" class="logo">
+                <img src="images/WhatsApp Image 2023-02-11 at 10.49.46 PM.jpeg" class="logo">
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -32,7 +32,7 @@
                <p> I am a Computer Science Student at KLS GIT college Belgaum. I am interested in Web development, coding. I have worked 
                 on softwares like Power BI, MS Excel , Tableau under Data Visualisation Tools.My mother tongue is Kannada, but I can 
                 communicate in English, Hindi.I have been working with C, C++, Java, Python.My hobbies includes dancing, photography, 
-                drawing, paper crafting.</p>
+                drawing, paper crafting,singing.</p>
             </div>
             </div>
         </div>
@@ -41,7 +41,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="WhatsApp_Image_2023-02-11_at_8.14.42_PM-removebg-preview.png">
+                    <img src="images/WhatsApp_Image_2023-02-11_at_8.14.42_PM-removebg-preview.png">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
@@ -76,7 +76,7 @@
             <h1 class="sub-title">My Education</h1>
             <div class="work-list">
                 <div class="work">
-                <img src="schlogo.jpg">
+                <img src="images/schlogo.jpg">
                 <div class="layer">
                     <h3>My School</h3>
                     <p>KRCES EMS Bailhongal</p>
@@ -85,7 +85,7 @@
                 </div>
             </div>
             <div class="work">
-                <img src="prism.png">
+                <img src="images/prism.png">
                  <div class="layer">
                     <h3>PU College</h3>
                     <p>Prism PU Science College Dharwad</p>
@@ -95,7 +95,7 @@
                 </div>
             </div>
             <div class="work">
-                <img src="git.jpg">
+                <img src="images/git.jpg">
                 <div class="layer">
                     <h3>BE Degree</h3>
                     <p>KLS Gogte Institute of Technology</p>
@@ -122,7 +122,7 @@
                     </div>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name="myForm" onsubmit="return validateForm()" >
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
@@ -148,6 +148,7 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
+        
     </script>
     <script>
         var sidemenu=document.getElementById("sidemenu");
@@ -156,6 +157,21 @@
         }
         function closemenu(){
             sidemenu.style.right="-200px";
+        }
+    </script>
+    <script>
+        function validateForm(){
+            let x=document.forms["myForm"]["email"].value;
+            a=x.indexOf("@");
+            b=x.lastIndexOf(".");
+            if(a<1||((b-a)<2)){
+                alert("Invalid emailId");
+                return false;
+            }
+            else{
+                alert("Your message is accepted succesfully");
+                return true;
+            }
         }
     </script>
 </body>
